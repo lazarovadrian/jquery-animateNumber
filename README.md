@@ -28,6 +28,7 @@
 | Путь | Что внутри |
 | --- | --- |
 | [`docs/soldering.md`](docs/soldering.md) | Журнал пайки и короткие правила |
+| [`docs/inventory.md`](docs/inventory.md) | Что уже лежит на столе, с количеством и параметрами |
 | [`docs/components.md`](docs/components.md) | Список деталей и микросхем |
 | [`docs/wiring.md`](docs/wiring.md) | Кто с кем соединён |
 | [`docs/questions.md`](docs/questions.md) | Вопросы про микросхемы и пайку |

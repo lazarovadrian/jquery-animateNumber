@@ -1,71 +1,39 @@
-[![Code Climate](https://codeclimate.com/github/aishek/jquery-animateNumber.png)](https://codeclimate.com/github/aishek/jquery-animateNumber)
+# ESP32-C3 RC Car
 
-jquery-animateNumber
-====================
+Личный проект: учусь паять, разбираюсь в микросхемах и собираю свою RC-модель машинки на **ESP32-C3**.
 
-[Demo](http://aishek.github.io/jquery-animateNumber/) | [v0.0.14 – Latest Release](https://github.com/aishek/jquery-animateNumber/releases/tag/v0.0.14)
+Репозиторий на GitHub пока называется `jquery-animateNumber` — это старый форк, содержимое плагина удалено. Подходящее имя: **`esp32c3-rc-car`**. Переименовать его можно только вручную: Settings → General → Repository name. У этого агента нет прав администратора репозитория.
 
-[README на русском языке](https://github.com/aishek/jquery-animateNumber/blob/master/README.ru.md)
+## Зачем этот репозиторий
 
-jQuery numbers animation plugin, adds 'number' property and step function to jQuery's animate function properties.
+Сюда складывается всё по машинке:
 
-Requires jQuery 1.7.0 or higher (latest tested with 3.3.1).
+- что и как паять;
+- какие микросхемы стоят в схеме и зачем;
+- вопросы, которые ещё не закрыты;
+- схема соединений;
+- прошивка ESP32-C3.
 
-## Quick example
-```html
-<p>Fun level <span id="fun-level" style="color: red; font-size: 0px;">0 %</span>.</p>
-```
+## С чего начать
 
-```js
-// animateNumber accepts same arguments, as animate does
-// it adds only 'number' and 'numberStep' params
-$('#fun-level').animateNumber(
-  {
-    number: 100,
-    color: 'green', // require jquery.color
-    'font-size': '50px',
+1. Плата **ESP32-C3** (DevKit или Super Mini).
+2. Два мотор-редуктора, драйвер моторов, питание и шасси.
+3. Прошить каркас из [`firmware/`](firmware/) и убедиться, что плата отвечает в Serial.
+4. Паять по одному узлу и записывать результат в [`docs/soldering.md`](docs/soldering.md).
 
-    // optional custom step function
-    // using here to keep '%' sign after number
-    numberStep: function(now, tween) {
-      var floored_number = Math.floor(now),
-          target = $(tween.elem);
+Моторы и драйвер подключать только после того, как плата жива, питание выбрано и пины записаны в [`docs/wiring.md`](docs/wiring.md).
 
-      target.text(floored_number + ' %');
-    }
-  },
-  {
-    easing: 'swing',
-    duration: 1800
-  }
-);
-```
+## Карта репозитория
 
-[All examples](http://aishek.github.io/jquery-animateNumber/)
+| Путь | Что внутри |
+| --- | --- |
+| [`docs/soldering.md`](docs/soldering.md) | Журнал пайки и короткие правила |
+| [`docs/components.md`](docs/components.md) | Список деталей и микросхем |
+| [`docs/wiring.md`](docs/wiring.md) | Кто с кем соединён |
+| [`docs/questions.md`](docs/questions.md) | Вопросы про микросхемы и пайку |
+| [`firmware/`](firmware/) | Прошивка на PlatformIO, каркас Arduino |
+| [`hardware/`](hardware/) | Заметки по плате и механике |
 
-## Alternative plugins for same task
+## Как вести заметки
 
-* [jQuery Numerator](http://plugins.jquery.com/numerator/)
-
-## Development
-
-1. `npm install grunt-cli -g`
-2. `npm install`
-3. `https://github.com/gmarty/grunt-closure-compiler`
-4. `grunt watch`
-
-## Note on Patches / Pull Requests
-
-* Fork the project.
-* Make your feature addition or bug fix.
-* Send me a pull request. Bonus points for topic branches.
-
-## License
-
-It is free software, and may be redistributed under the terms specified in the LICENSE file.
-
-## Contributors
-
-* [Alexandr Borisov](https://github.com/aishek)
-* [Greg Thornton](https://github.com/xdissent)
-* [Tomáš Opekar](https://github.com/topik)
+Новый вопрос — строка в [`docs/questions.md`](docs/questions.md): деталь, что уже пробовал, что именно непонятно. Закрытый вопрос не удалять: ответ пригодится, когда та же микросхема встретится снова.

@@ -33,7 +33,10 @@
 | [`docs/questions.md`](docs/questions.md) | Вопросы про микросхемы и пайку |
 | [`firmware/`](firmware/) | Прошивка на PlatformIO, каркас Arduino |
 | [`hardware/`](hardware/) | Заметки по плате и механике |
+| [`memory.mdc`](memory.mdc) | Журнал запросов, вопросов, ответов и решений |
 
 ## Как вести заметки
 
 Новый вопрос — строка в [`docs/questions.md`](docs/questions.md): деталь, что уже пробовал, что именно непонятно. Закрытый вопрос не удалять: ответ пригодится, когда та же микросхема встретится снова.
+
+Каждый запрос, вопрос, ответ и решение дополнительно дописываются в [`memory.mdc`](memory.mdc). Перед следующей задачей этот файл читается целиком, и уже записанный ответ выполняется снова. Правило — [`.cursor/rules/follow-memory.mdc`](.cursor/rules/follow-memory.mdc), порядок — [`.cursor/skills/project-memory/SKILL.md`](.cursor/skills/project-memory/SKILL.md).

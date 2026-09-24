@@ -37,7 +37,7 @@
         <mxCell id="n20" value="N20 1:120&#10;только выходы драйвера&#10;не на GPIO&#10;вместо заднего редуктора" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="1360" y="80" width="200" height="110" as="geometry"/>
         </mxCell>
-        <mxCell id="sg" value="SG90 × 3&#10;плюс и земля с шины&#10;сигнал с ESP, пины пустые&#10;роль не назначена&#10;паспорт 4,8–6 В, банка 3,7–4,2 В" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="sg" value="SG90 × 1, руль передних колёс&#10;плюс и земля с шины&#10;сигнал с ESP, пин пустой&#10;ещё две SG90 не в схеме&#10;паспорт 4,8–6 В, банка 3,7–4,2 В" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="1060" y="250" width="250" height="130" as="geometry"/>
         </mxCell>
         <mxCell id="xl" value="XL767A, штатная плата&#10;зад: жёлтый −R, красный +R&#10;перед: жёлтый −W, красный +W&#10;SPK — динамик игрушки&#10;напряжение платы не измерено" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">

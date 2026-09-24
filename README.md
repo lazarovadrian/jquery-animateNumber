@@ -34,6 +34,7 @@
 | [`docs/wiring.md`](docs/wiring.md) | Кто с кем соединён |
 | [`docs/questions.md`](docs/questions.md) | Вопросы про микросхемы и пайку |
 | [`firmware/`](firmware/) | Прошивка на PlatformIO, каркас Arduino |
+| [`docs/chassis.md`](docs/chassis.md) | Кузов Toyota Tundra: фары, подвеска, замена заднего привода |
 | [`hardware/`](hardware/) | Заметки по плате и механике |
 | [`memory.mdc`](memory.mdc) | Журнал запросов, вопросов, ответов и решений |
 

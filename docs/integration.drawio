@@ -1,0 +1,81 @@
+<mxfile host="app.diagrams.net" agent="cursor" version="22.1.0">
+  <diagram id="tundra-integration" name="Интеграция Tundra 1:24">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="Tundra 1:24 — интеграция. Номера GPIO не назначены. Банки не параллелить." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="900" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="b600" value="Аккумулятор&#10;3,7 В, 600 мА·ч&#10;не параллелить с 18650" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="40" y="70" width="200" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="tp1" value="TP4056 №1&#10;только эта банка&#10;заряд до 4,2 В" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="300" y="70" width="180" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="b18650" value="Li-World IMR18650&#10;3,7 В, 800 мА·ч&#10;2,96 Вт·ч" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="40" y="190" width="200" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="tp2" value="TP4056 №2&#10;только эта банка&#10;не оба модуля сразу" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="300" y="190" width="180" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="one" value="В машинке одна пара:&#10;одна банка и её TP4056.&#10;Второй выход не сажать на шину." style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="520" y="110" width="200" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="vbus" value="Шина +&#10;3,7–4,2 В" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="80" width="160" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="gnd" value="Общий GND&#10;банка, TP4056, ESP, драйвер,&#10;сервы, XL767A, мотор" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="160" width="220" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="esp" value="ESP32-C3 Super Mini Pro&#10;логика 3,3 В&#10;питание: вход модуля,&#10;не пин 3,3 В и не GPIO&#10;сигналы: GPIO не назначены" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="760" y="270" width="240" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="tb" value="TB6612FNG&#10;VM от шины +&#10;VCC от 3,3 В ESP&#10;STBY, IN1, IN2, PWM — пины пустые&#10;ниже 4,5 В ток меньше 1,2 А" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="70" width="250" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="n20" value="N20 1:120&#10;только выходы драйвера&#10;не на GPIO&#10;вместо заднего редуктора" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="80" width="200" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="sg" value="SG90 × 3&#10;плюс и земля с шины&#10;сигнал с ESP, пины пустые&#10;роль не назначена&#10;паспорт 4,8–6 В, банка 3,7–4,2 В" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="250" width="250" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="xl" value="XL767A, штатная плата&#10;зад: жёлтый −R, красный +R&#10;перед: жёлтый −W, красный +W&#10;SPK — динамик игрушки&#10;напряжение платы не измерено" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="760" y="450" width="260" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="rear" value="Задние фары&#10;жёлтый минус, красный плюс" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="430" width="200" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="front" value="Передние фары DL-LS1045&#10;жёлтый минус, красный плюс" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="520" width="220" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="caps" value="100 нФ керамика: 3,3 В–GND у ESP и у VCC драйвера.&#10;47 мкФ 100 В на VM, полоса на минус.&#10;4,7 мкФ 100 В у логики, не вместо керамики." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="340" width="420" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="ban" value="Не подключать&#10;плата с Type-C и экраном RPM:&#10;имена микросхем не прочитаны.&#10;Не вешать её на банку вместе с TP4056." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="250" width="240" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="rules" value="Нельзя: мотор на GPIO; две банки параллельно;&#10;два TP4056 на одну банку; фары на GPIO;&#10;плюс банки на пин 3,3 В.&#10;При прошивке по USB банку и TP4056 отключить." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="450" width="420" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#b85450;" edge="1" parent="1" source="b600" target="tp1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#b85450;" edge="1" parent="1" source="b18650" target="tp2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e3" value="OUT" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#b85450;" edge="1" parent="1" source="tp1" target="one"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e4" value="OUT" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#b85450;" edge="1" parent="1" source="tp2" target="one"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e5" value="одна шина" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#b85450;" edge="1" parent="1" source="one" target="vbus"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e6" value="VM" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#b85450;" edge="1" parent="1" source="vbus" target="tb"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e7" value="вход модуля" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#b85450;" edge="1" parent="1" source="vbus" target="esp"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e8" value="V+" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#b85450;" edge="1" parent="1" source="vbus" target="sg"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e9" value="3,3 В на VCC" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#6c8ebf;" edge="1" parent="1" source="esp" target="tb"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e10" value="IN, PWM, STBY&#10;пины пустые" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#6c8ebf;dashed=1;" edge="1" parent="1" source="esp" target="tb"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e11" value="AO1 AO2" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#82b366;" edge="1" parent="1" source="tb" target="n20"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e12" value="3 сигнала&#10;пины пустые" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#9673a6;dashed=1;" edge="1" parent="1" source="esp" target="sg"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e13" value="после проверки напряжения" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#d6b656;dashed=1;" edge="1" parent="1" source="vbus" target="xl"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e14" value="−R жёлтый&#10;+R красный" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#d6b656;" edge="1" parent="1" source="xl" target="rear"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e15" value="−W жёлтый&#10;+W красный" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#d6b656;" edge="1" parent="1" source="xl" target="front"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e16" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="gnd" target="esp"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e17" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=none;strokeColor=#666666;strokeWidth=2;" edge="1" parent="1" source="gnd" target="tb"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

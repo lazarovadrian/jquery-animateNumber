@@ -31,6 +31,8 @@
 | [`docs/inventory.md`](docs/inventory.md) | Что уже лежит на столе, с количеством и параметрами |
 | [`docs/typec-board.md`](docs/typec-board.md) | Плата с Type-C: площадки, экран, что не прочитано |
 | [`docs/components.md`](docs/components.md) | Список деталей и микросхем |
+| [`docs/integration.drawio`](docs/integration.drawio) | Схема интеграции в формате draw.io |
+| [`docs/integration.md`](docs/integration.md) | Пояснение к схеме: питание, мотор, сервы, фары |
 | [`docs/wiring.md`](docs/wiring.md) | Кто с кем соединён |
 | [`docs/questions.md`](docs/questions.md) | Вопросы про микросхемы и пайку |
 | [`firmware/`](firmware/) | Прошивка на PlatformIO, каркас Arduino |

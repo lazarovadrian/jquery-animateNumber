@@ -1,0 +1,41 @@
+<mxfile host="app.diagrams.net" agent="cursor" version="22.1.0">
+  <diagram id="breadboard-test" name="Макетка, по этапам">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="Макетка 400 точек. Кузов не участвует. GPIO не назначены." style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="900" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="s1" value="Этап 1. Только плата&#10;ESP32-C3 Super Mini Pro&#10;питание от USB компьютера&#10;в Serial строка esp32c3-rc-car&#10;банка, драйвер и мотор не воткнуты" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="70" width="280" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="s2" value="Этап 2. Одна банка и её TP4056&#10;600 мА·ч или 18650, не обе&#10;общий GND с ESP&#10;плюс банки не на пин 3,3 В&#10;ESP всё ещё от USB&#10;мультиметром смотреть OUT модуля" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="360" y="70" width="300" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="s3" value="Этап 3. TB6612FNG без мотора&#10;VCC от 3,3 В ESP&#10;GND общий&#10;VM ещё не подключать&#10;плата не должна греться" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="700" y="70" width="260" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="s4" value="Этап 4. N20&#10;VM драйвера от OUT банка&#10;обмотка только на AO1 и AO2&#10;вал свободный, не в кузове&#10;короткий импульс&#10;силовой ток по дорожкам макетки не гонять долго" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="60" width="280" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="s5" value="Этап 5. Одна SG90&#10;плюс и земля с шины банки&#10;сигнальный провод не втыкать,&#10;пока пин не записан в wiring.md&#10;паспорт 4,8–6 В, банка 3,7–4,2 В" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="40" y="250" width="300" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="bb" value="Беспаечная плата 400 точек&#10;общая земля одной шиной GND&#10;плюс банка и плюс 3,3 В — разные рельсы&#10;не смешивать" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="250" width="280" height="110" as="geometry"/>
+        </mxCell>
+        <mxCell id="cap" value="На этапе 3 воткнуть 100 нФ&#10;между 3,3 В и GND у ESP и у VCC драйвера.&#10;На этапе 4 электролит 47 мкФ на VM,&#10;полоса на минус." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="700" y="250" width="300" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="out" value="На макетку не ставить&#10;кузов, фары, XL767A,&#10;вторую банку, второй TP4056,&#10;плату с экраном RPM,&#10;две запасные SG90" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="250" width="240" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" value="дальше, если Serial живой" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#6c8ebf;" edge="1" parent="1" source="s1" target="s2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" value="GND общий, VM нет" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#82b366;" edge="1" parent="1" source="s2" target="s3"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e3" value="потом VM и мотор" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#82b366;" edge="1" parent="1" source="s3" target="s4"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e4" value="серва после мотора" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#9673a6;" edge="1" parent="1" source="s1" target="s5"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
